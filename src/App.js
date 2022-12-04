@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Navigate, Route, Routes,Switch } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes,Switch } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -44,9 +44,10 @@ function App() {
 
 
 
-<BrowserRouter basename='/munidenuncias'>
+<BrowserRouter >
+<HashRouter basename='/'>
 <Routes>
-  <Route path='/munidenuncias/vecino' element={ <NavBarExample /> }>
+  <Route path='/vecino' element={ <NavBarExample /> }>
     <Route index element={ <Home /> } />
     <Route path='denunciar' element={ <Denunciar /> } />
     <Route path='mis_denuncias' element={ <DenunciasVecino misdenuncias={misdenuncias} /> } />
@@ -54,7 +55,7 @@ function App() {
   </Route>
 
 
-  <Route path='/munidenuncias/muni' element={ <NavBarMuni /> }>
+  <Route path='/muni' element={ <NavBarMuni /> }>
     <Route index element={ <HomeMuni /> } />
     <Route path='anuncio' element={ <Anuncio/> } />
     <Route path= 'denuncia/:estado'>
@@ -65,6 +66,7 @@ function App() {
     <Route path='*' element={ <Navigate replace to="/muni"/> }/>
   </Route>
 </Routes> 
+</HashRouter>
 </BrowserRouter>
 
 
