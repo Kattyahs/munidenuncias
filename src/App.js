@@ -44,7 +44,7 @@ function App() {
 
 
 
-<BrowserRouter>
+<BrowserRouter basename='/munidenuncias'>
 <Routes>
   <Route path='/vecino' element={ <NavBarExample /> }>
     <Route index element={ <Home /> } />
