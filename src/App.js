@@ -46,7 +46,7 @@ function App() {
 
 <BrowserRouter basename='/munidenuncias'>
 <Routes>
-  <Route path='/vecino' element={ <NavBarExample /> }>
+  <Route path='/munidenuncias/vecino' element={ <NavBarExample /> }>
     <Route index element={ <Home /> } />
     <Route path='denunciar' element={ <Denunciar /> } />
     <Route path='mis_denuncias' element={ <DenunciasVecino misdenuncias={misdenuncias} /> } />
@@ -54,7 +54,7 @@ function App() {
   </Route>
 
 
-  <Route path='/muni' element={ <NavBarMuni /> }>
+  <Route path='/munidenuncias/muni' element={ <NavBarMuni /> }>
     <Route index element={ <HomeMuni /> } />
     <Route path='anuncio' element={ <Anuncio/> } />
     <Route path= 'denuncia/:estado'>
